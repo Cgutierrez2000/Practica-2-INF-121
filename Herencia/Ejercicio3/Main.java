@@ -19,7 +19,7 @@ public class Main {
         for (int i = 0; i < estudiantes.length; i++) {
             int edad = añoActual - estudiantes[i].getFecha_Nac();
             if (edad > 25) {
-                estudiantes[i].mostrar();
+                estudiantes[i].mostrar();///aca apodemos mejorar
                 System.out.println("Edad: " + edad + "\n");
             }
         }
