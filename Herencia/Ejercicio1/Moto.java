@@ -1,3 +1,5 @@
+package HERENCIA.Ejercicio1;
+
 public class Moto extends Vehiculo {
     private int cilindrada;
     private String tipo_moto;
@@ -33,7 +35,7 @@ public class Moto extends Vehiculo {
     @Override
     public void mostrar_actual(int x) {
         if (getAño() == x) {
-            mostrar_info();
+            super.mostrar_info();
         }
     }
 

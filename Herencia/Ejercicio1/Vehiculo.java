@@ -1,3 +1,5 @@
+package HERENCIA.Ejercicio1;
+
 public class Vehiculo {
     protected String marca, modelo;
     protected int año;

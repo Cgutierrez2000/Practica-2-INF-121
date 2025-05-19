@@ -1,3 +1,5 @@
+package HERENCIA.Ejercicio1;
+
 public class Coche extends Vehiculo {
     private int num_puertas;
     private String tipo_combustible;
@@ -33,14 +35,14 @@ public class Coche extends Vehiculo {
 
     public void mostrar_puertas() {
         if (this.num_puertas > 4) {
-            mostrar_info();
+            super.mostrar_info();
         }
     }
 
     @Override
     public void mostrar_actual(int x) {
         if (getAño() == x) {
-            mostrar_info();
+            super.mostrar_info();
         }
     }
 
