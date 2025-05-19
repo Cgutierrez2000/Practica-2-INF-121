@@ -71,25 +71,30 @@ public class Docente extends Persona {
     }
 
     public void mostrar() {
-        System.out.println("CI: " + getCi());
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Apellido: " + getApellido());
-        System.out.println("Celular: " + getCelular());
-        System.out.println("Fecha de Nacimiento: " + getFecha_Nac());
+        super.mostrar();
         System.out.println("NIT: " + this.nit);
         System.out.println("Profesión: " + this.profesion);
         System.out.println("Especialidad: " + this.especialidad);
         System.out.println("Sexo: " + this.sexo);
     }
 
-    public void mostrarDocenteMayor(Docente[] docentes, String profesion, String sexo, int añoActual) {
+    // Método para saber si el docente cumple con profesion y sexo dados
+    public boolean esDeProfesionYSexo(String profesion, String sexo) {
+        return this.profesion.equalsIgnoreCase(profesion) && this.sexo.equalsIgnoreCase(sexo);
+    }
+
+    // Metodo para calcular la edad del docente
+    public int getEdad(int añoActual) {
+        return añoActual - this.getFecha_Nac();
+    }
+
+    public static void mostrarDocenteMayor(Docente[] docentes, String profesion, String sexo, int añoActual) {
         Docente mayor = null;
         int mayorEdad = 0;
 
         for (int i = 0; i < docentes.length; i++) {
-            if (docentes[i].getProfesion().equalsIgnoreCase(profesion) &&
-                    docentes[i].getSexo().equalsIgnoreCase(sexo)) {
-                int edad = añoActual - docentes[i].getFecha_Nac();
+            if (docentes[i].esDeProfesionYSexo(profesion, sexo)) {
+                int edad = docentes[i].getEdad(añoActual);
                 if (edad > mayorEdad) {
                     mayorEdad = edad;
                     mayor = docentes[i];

@@ -51,14 +51,13 @@ public class Estudiante extends Persona {
     }
 
     public void mostrar() {
-        System.out.println("CI: " + getCi());
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Apellido: " + getApellido());
-        System.out.println("Celular: " + getCelular());
-        System.out.println("Fecha de Nacimiento: " + getFecha_Nac());
+        super.mostrar();
         System.out.println("RU: " + this.ru);
         System.out.println("Fecha Ingreso: " + this.fecha_Ingreso);
         System.out.println("Semestre: " + this.semestre);
     }
 
+    public boolean esMayorDe25(int añoActual) {
+        return (añoActual - this.getFecha_Nac()) > 25;
+    }
 }

@@ -35,7 +35,7 @@ public class Main {
             }
         }
 
-        // Mostrar desarrolladores con más de 10 horas extras
+        // Mostrar desarrolladores con mas de 10 horas extras
         System.out.println("\nDesarrolladores con más de 10 horas extras:");
         for (int i = 0; i < desarrolladores.size(); i++) {
             Desarrollador d = desarrolladores.get(i);

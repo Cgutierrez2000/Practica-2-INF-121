@@ -1,11 +1,11 @@
-package Herencia.Ejercicio3;
+package Ejercicio3;
 
 public class Persona {
     protected int ci;
     protected String nombre;
     protected String apellido;
     protected int celular;
-    protected int fecha_Nac; // año de nacimiento
+    protected int fecha_Nac;
 
     public Persona(int ci, String n, String ap, int cel, int fn) {
         this.ci = ci;
@@ -63,6 +63,15 @@ public class Persona {
         this.fecha_Nac = fn;
     }
 
+    public void mostrar() {
+        System.out.println("CI: " + this.ci);
+        System.out.println("Nombre: " + this.nombre);
+        System.out.println("Apellido: " + this.apellido);
+        System.out.println("Celular: " + this.celular);
+        System.out.println("Fecha de Nacimiento: " + this.fecha_Nac);
+    }
+
+    // Metodo para calcular la edad
     public int getEdad(int añoActual) {
         return añoActual - this.fecha_Nac;
     }
