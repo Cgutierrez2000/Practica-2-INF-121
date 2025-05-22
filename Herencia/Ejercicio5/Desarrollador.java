@@ -14,6 +14,13 @@ public class Desarrollador extends Empleado {
         return super.calcular_salario() + pago_horas_extras;
     }
 
+    public void mostrarSiMasDeNHorasExtras(int n) {
+        if (this.horas_extras > n) {
+            System.out.println(
+                    this.getNombre() + " " + this.getApellido() + " - Horas extras: " + this.getHoras_extras());
+        }
+    }
+
     public String getLenguaje_programacion() {
         return lenguaje_programacion;
     }

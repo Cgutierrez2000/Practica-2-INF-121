@@ -17,7 +17,6 @@ public class Main {
         System.out.println("Desarrollador 1: " + dev1.calcular_salario());
         System.out.println("Desarrollador 2: " + dev2.calcular_salario());
 
-        // Lista de gerentes y desarrolladores
         ArrayList<Gerente> gerentes = new ArrayList<>();
         gerentes.add(gerente1);
         gerentes.add(gerente2);
@@ -29,19 +28,13 @@ public class Main {
         // Mostrar gerentes con bono gerencial mayor a 1000
         System.out.println("\nGerentes con bono gerencial mayor a 1000:");
         for (int i = 0; i < gerentes.size(); i++) {
-            Gerente g = gerentes.get(i);
-            if (g.getBono_gerencial() > 1000) {
-                System.out.println(g.getNombre() + " " + g.getApellido() + " - Bono: " + g.getBono_gerencial());
-            }
+            gerentes.get(i).mostrarSiBonoMayorA(1000);
         }
 
         // Mostrar desarrolladores con mas de 10 horas extras
-        System.out.println("\nDesarrolladores con más de 10 horas extras:");
+        System.out.println("\nDesarrolladores con mas de 10 horas extras:");
         for (int i = 0; i < desarrolladores.size(); i++) {
-            Desarrollador d = desarrolladores.get(i);
-            if (d.getHoras_extras() > 10) {
-                System.out.println(d.getNombre() + " " + d.getApellido() + " - Horas extras: " + d.getHoras_extras());
-            }
+            desarrolladores.get(i).mostrarSiMasDeNHorasExtras(10);
         }
     }
 }

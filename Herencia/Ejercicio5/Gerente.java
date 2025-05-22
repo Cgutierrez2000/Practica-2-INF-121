@@ -14,6 +14,12 @@ public class Gerente extends Empleado {
         return super.calcular_salario() + this.bono_gerencial;
     }
 
+    public void mostrarSiBonoMayorA(double monto) {
+        if (this.bono_gerencial > monto) {
+            System.out.println(this.getNombre() + " " + this.getApellido() + " - Bono: " + this.getBono_gerencial());
+        }
+    }
+
     public String getDepartamento() {
         return departamento;
     }
